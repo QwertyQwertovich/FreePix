@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Photo {{photo.id}}
+{% endblock %}
+
+{% block body %}
+<h1 align="center"> Photo {{photo.id}} </h1>
+<p class="fig"><img src="/static/images/{{photo.photo_id}}.jpg" width="70%" alt="Error" align="center"></p><br>
+<p class="fig">Author: <b style="color:#3700fc">{{photo.author}}</b></p><br>
+    <p class="fig">Place: <b style="color:#3700fc">{{photo.place}}</b></p><br>
+    <p class="fig">Date: <b style="color:#3700fc">{{photo.date}}</b></p><br>
+    <p class="fig">Upload Date: <b style="color:#3700fc">{{photo.update}}</b></p><br>
+    <p class="fig">{{photo.desc}}</p><br>
+    {{photo.train_id}}<br>
+{% endblock %}

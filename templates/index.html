@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+TrainPix 2.0
+{% endblock %}
+<link rel="stylesheet" href="/static/css/dstyle.css">
+{% block body %}
+<h1 align="center"> Latest Photos </h1>
+<div class="p20p" style="background-color:#1aff66">
+<table><tr><td class="pb_photo"><a href="/photo/{{photo[-1].photo_id}}" target="_blank" class="prw"><img class="f" src="/static/images/{{photo[-1].photo_id}}.jpg" alt="695 КБ"><div class="hpshade"></div></a></td>
+<td class="pb_descr">
+<p><b class="pw-place1">{{photo[-1].place}}</b><br /></p>
+<p class="sm"><b>Date: {{photo[-1].date}}</b><br />Author: {{photo[-1].author}}</p>
+</td>
+</tr></table>
+</div>
+{% endblock %}

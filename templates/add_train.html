@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Train upload
+{% endblock %}
+
+{% block body %}
+<h1>Train upload</h1>
+<form method="post" enctype="multipart/form-data">
+    Author
+    <input type="text" name="author" id="author"><br>
+    Password
+    <input type="password" name="pass" id="pass"> Contact <a href="https://vk.com/ilter2">https://vk.com/ilter2</a> if you don't have it<br>
+    Model
+    <input type="text" name="model" id="model"><br>
+    Number
+    <input type="text" name="number" id="number"><br>
+    Depot
+    <input type="text" name="depot" id="depot"><br>
+    Build Date
+    <input type="datetime-local" id="built" name="built"><br>
+    <p>condition</p>
+    <form>
+      <input type="radio" id="In_operation" name="fav_language" value="In operation ">
+      <label for="In_operation">In operation</label><br>
+      <input type="radio" id="Out_of_order" name="fav_language" value="Out of order">
+      <label for="Out_of_order">Out of order</label><br>
+      <input type="radio" id="Written_off" name="fav_language" value="Written off">
+      <label for="Written_off">Written off</label><br>
+        <input type="radio" id="Other" name="fav_language" value="Other">
+      <label for="Other">Other</label>
+    </form>
+        <p>category</p>
+    <form>
+      <input type="radio" id="Electric_Suburban" name="fav_language" value="Electric Suburban">
+      <label for="Electric_Suburban">Electric Suburban</label><br>
+      <input type="radio" id="Diesel_Locomotives" name="fav_language" value="Diesel Locomotives">
+      <label for="Diesel_Locomotives">Diesel Locomotives</label><br>
+      <input type="radio" id="Electric_Locomotives" name="fav_language" value="Electric Locomotives">
+      <label for="Electric_Locomotives">Electric Locomotives</label><br>
+      <input type="radio" id="other2" name="fav_language" value="Other">
+      <label for="Other">Other</label>
+    </form>
+    Description
+    <textarea name="desc" id="desc"></textarea><br>
+    <input type="submit" value="Submit"><br>
+</form>
+{% endblock %}

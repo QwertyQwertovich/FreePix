@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Photo upload
+{% endblock %}
+
+{% block body %}
+<h1>Photo upload</h1>
+<form method="post" enctype="multipart/form-data">
+    Author
+    <input type="text" name="author" id="author"><br>
+    Password
+    <input type="password" name="pass" id="pass"> Contact <a href="https://vk.com/ilter2">https://vk.com/ilter2</a> if you don't have it<br>
+    Train_id
+    <input type="number" name="train_id" id="train_id"><br>
+    Place
+    <input type="text" name="place" id="place"><br>
+    Photo Upload
+    <p><input type="file" name="file"></p><br>
+    Description
+    <textarea name="desc" id="desc"></textarea><br>
+    Capture date
+    <input type="datetime-local" id="date" name="date"><br>
+    or Take from exif
+    <input type="checkbox" id="check" name="check"><br>
+    <input type="submit" value="submit"><br>
+</form>
+{% endblock %}
